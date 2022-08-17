@@ -20,6 +20,7 @@ app = Quart(__name__)
 
 app.secret_key = b"random bytes representing quart secret key"
 
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 app.config["DISCORD_CLIENT_ID"] = 490732332240863233    # Discord client ID.
 app.config["DISCORD_CLIENT_SECRET"] = ""                # Discord client secret.
 app.config["DISCORD_REDIRECT_URI"] = ""                 # URL to your callback endpoint.
